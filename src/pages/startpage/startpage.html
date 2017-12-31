@@ -1,0 +1,48 @@
+<ion-grid>
+  <ion-row margin-top padding-top>
+
+    <!--New Design Code-->
+    <!-- <ion-card margin-top class="uniBannerCard" [ngStyle]="{'background-image':'url(' + universityData.hero_image + ')','background-position':'center','background-repeat':'no-repeat','background-size':'cover'}"> -->
+    <ion-card margin-top>
+      <img style="width:100%;height:100%" src="./assets/imgs/download.png" onError="this.src = 'https://noteera.s3.amazonaws.com/university/SWau7YFJbZww5BWNb_e92a2f99-77c6-c1da-0214-a2f3501e0813.jpg'">
+
+
+    </ion-card>
+  </ion-row>
+
+  <ion-row margin-top padding-top>
+
+
+    <ion-col col-12>
+      <ion-list style="width:100%;">
+        <ion-item>
+          <a href="javascript:void(0);" (click)="gotoPage('student')" color="dark">
+            <h2>
+              <ion-icon name="clipboard"></ion-icon> STUDENT</h2>
+          </a>
+        </ion-item>
+        <ion-item>
+          <a href="javascript:void(0);" color="dark" (click)="gotoPage('staff')">
+            <h2>
+              <ion-icon name="clipboard"></ion-icon> STAFF</h2>
+          </a>
+        </ion-item>
+        <ion-item>
+          <a href="javascript:void(0);" color="dark" (click)="gotoPage('company')">
+            <h2>
+              <ion-icon name="clipboard"></ion-icon> COMPANY</h2>
+          </a>
+        </ion-item>
+        <ion-item>
+          <a href="javascript:void(0);" color="dark" (click)="gotoPage('tpo')">
+            <h2>
+              <ion-icon name="clipboard"></ion-icon> TPO </h2>
+          </a>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+
+
+  </ion-row>
+
+</ion-grid>

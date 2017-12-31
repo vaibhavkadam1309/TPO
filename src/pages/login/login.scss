@@ -1,0 +1,70 @@
+  // .login-screen {
+  //     width: 33.33%;
+  //     margin: auto;
+  //     @include min-screen(1600px) {
+  //         width: 25%;
+  //     }
+  //     @include screen(768px, 1024px) {
+  //         width: 50%;
+  //     }
+  //     @include max-screen(767px) {
+  //         width: auto;
+  //     }
+  //     ion-item {
+  //         padding-left: 0px !important;
+  //     }
+  //     .title-section {
+  //         h3 {
+  //             font-weight: 300;
+  //         }
+  //     }
+  // }
+  // .login-screen{    
+  //    .login-box{
+  //     width: 400px;
+  //     margin: auto;
+  //      @media (max-width: 767px) {
+  //          width: auto;
+  //      }
+  //    }
+  // }
+  $backgroundWhite: #fff;
+  .signupContent,
+  .signinContent,
+  .forgotpswdContent {
+    border-radius: 8px;
+    div {
+      overflow: hidden;
+      margin: auto;
+    }
+    @media (max-width: 767px) {
+      border-radius: 0px;
+    }
+    .formBox {
+      //border: 1px solid #ddd;
+      //width: 550px;
+      margin-left: 20px;
+      margin-right: 20px;
+      @media (max-width: 767px) {
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .policyblock {
+      font-size: 12px;
+      padding-left: 4px;
+      padding-right: 4px;
+      @media (max-width: 767px) {
+        margin: 0;
+      }
+    }
+    .title-section {
+      @media (max-width: 767px) {
+        height: 45px;
+      }
+      .toolbar-background{
+        background-color: transparent;
+      }
+    }
+  }

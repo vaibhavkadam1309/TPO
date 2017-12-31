@@ -1,0 +1,76 @@
+<ion-content class="signinContent">
+        <div margin-vertical>
+      
+          <div class="title-section">
+            <ion-toolbar>
+              <ion-title>
+                
+                <span >  Login</span>
+              </ion-title>
+              <ion-buttons end>
+                <button ion-button icon-only large clear (click)="viewController.dismiss()"><ion-icon name="close" ></ion-icon></button>
+              </ion-buttons>
+            </ion-toolbar>
+          </div>
+      
+      
+      
+      
+          <ion-row>
+            <ion-col>
+              <!--<div class="title-section" text-center margin-bottom>
+              <img src="./assets/img/noteera-logo.png" alt="logo" />
+              <h3 no-margin>Welcome to <b>Noteera</b></h3>
+              <p no-margin>Sign in to continue</p>
+            </div>-->
+              <form #loginForm="ngForm" novalidate>
+                <div class="formBox" padding>
+                  <ion-item>
+                    <ion-label floating>
+                      <ion-icon name="person"></ion-icon> Email Id
+                    </ion-label>
+                    <ion-input type="email" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$" [(ngModel)]="credentials.email" id="email"
+                      name="email" #email="ngModel" required>
+                    </ion-input>
+                  </ion-item>
+                  <p [hidden]="email.value || email.pristine" color="danger" padding-left>
+                    Email adress is required
+                  </p>
+                  <p [hidden]="email.valid || !email.value || email.pristine" color="danger" padding-left>
+                   Enter valid Email Id
+                  </p>
+                  <ion-item>
+                    <ion-label floating>
+                      <ion-icon name="lock"></ion-icon> Password
+                    </ion-label>
+                    <ion-input type="password" [(ngModel)]="credentials.password" id="password" name="password" #password="ngModel" required>
+                    </ion-input>
+                  </ion-item>
+                  <p [hidden]="password.valid || password.pristine" color="danger" padding-left>
+                   Password is required
+                  </p>
+                  <!-- <ion-item no-lines>
+                    <ion-label>Remember me</ion-label>
+                    <ion-checkbox [(ngModel)]="rememberMe" [ngModelOptions]="{standalone: true}" no-margin no-padding></ion-checkbox>
+                  </ion-item> -->
+                  <p>
+                    <button (click)="onLogin()" type="submit" color="primary" ion-button block [disabled]="!loginForm.form.valid" round> Login </button>
+                  </p>
+                </div>
+              
+                <!-- <ion-row padding-left padding-right>
+                  <ion-col>
+                    <a ion-text href="javascript:void(0);" (click)="onTemplateChange('forgetpassword')">{{staticDataService.data.EN_US.BUTTON_PASSWORD_FORGET}}</a>
+                  </ion-col>
+                  <ion-col text-right>
+                    <a ion-text href="javascript:void(0);" (click)="onTemplateChange('signup');">{{staticDataService.data.EN_US.BUTTON_SIGNUP}}</a>
+                  </ion-col>
+                </ion-row> -->
+              </form>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-content>
+      
+      
+       

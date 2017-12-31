@@ -1,0 +1,66 @@
+<ion-content padding-top>
+
+    <ion-grid>
+        <ion-row>
+            <button ion-button color="primary" (click)="openPopup()">Login</button>
+            <button ion-button color="primary" (click)="newRegisterFlag = true">New Registration </button>
+        </ion-row>
+        <!-- <form #studentHomeForm="ngForm" novalidate> -->
+        <ion-row *ngIf="newRegisterFlag">
+            <ion-item>
+                <ion-label floating primary>First Name</ion-label>
+                <ion-input type="text" [(ngModel)]="studentHome.firstName" id="firstName" name="firstName" #firstName="ngModel" required>
+                </ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating primary>Last Name</ion-label>
+                <ion-input type="text" [(ngModel)]="studentHome.lastName" id="lastName" name="lastName" #lastName="ngModel" required>
+                </ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating primary>Mobile Number</ion-label>
+                <ion-input type="text" [(ngModel)]="studentHome.mobile" id="mobile" name="mobile" #mobile="ngModel" required>
+                </ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating primary>Gender</ion-label>
+                <ion-select [(ngModel)]="studentHome.gender">
+                    <ion-option value="female">Female</ion-option>
+                    <ion-option value="male">Male</ion-option>
+                    <ion-option value="other">Others</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label floating primary>Department</ion-label>
+                <ion-select [(ngModel)]="studentHome.dept">
+                    <ion-option value="computer">Computer Science And Engg</ion-option>
+                    <ion-option value="male">Elecronics and Telecommunication</ion-option>
+                    <ion-option value="other">Civil</ion-option>
+                    <ion-option value="other">Electrical</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label floating primary>Year</ion-label>
+                <ion-select [(ngModel)]="studentHome.year">
+                    <ion-option value="first">First Year</ion-option>
+                    <ion-option value="second">Second Year</ion-option>
+                    <ion-option value="third">Third Year</ion-option>
+                    <ion-option value="final">Final Year</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label floating primary>PRN Number</ion-label>
+                <ion-input type="text" [(ngModel)]="studentHome.prnNumber" id="prnNumber" name="prnNumber" #prnNumber="ngModel" required>
+                </ion-input>
+            </ion-item>
+        </ion-row>
+        <ion-row *ngIf="newRegisterFlag">
+            <ion-col text-right>
+                <button ion-button type="submit" color="light">Cancel</button>
+                <button ion-button color="primary" (click) = "save(studentHome)">Register</button>
+                <!-- <button  [disabled]="!studentHomeForm.form.valid || !buttonflag" ion-button color="primary">{{staticDataService.data.EN_US.BUTTON_JOIN}}</button> -->
+            </ion-col>
+        </ion-row>
+        <!-- </form> -->
+    </ion-grid>
+</ion-content>

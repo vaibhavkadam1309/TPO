@@ -1,0 +1,167 @@
+.universityDetails {
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, .4);
+    }
+    .uniBannerCard {
+      position: relative;
+      //background: #485563;
+      height: 50%;
+      @media (max-width: 767px) {
+        height: 150px;
+        width: 100%;
+        margin: auto;
+      }
+      .actionBtns {
+        float: right;
+      }
+      @media (max-width: 767px) {
+        height: auto;
+      }
+    }
+    .uniBannerTitle {
+      color: #fff !important;
+      h2 {      
+        color: #fff !important;
+        font-weight: 500;
+        font-size: 2.2rem;
+        @media (max-width: 767px) {
+          font-size: 18px;
+          font-weight: normal;
+          white-space: normal;
+        }
+      }
+    }
+    .uniDetails1 {
+      .segment-button {
+        color: color($colors, dark);
+      }
+      ion-segment {
+        background-color: #f9f9f9;
+        .segment-activated {
+          background-color: #198e3c;
+          color: #fff;
+        }
+      }
+      .courseInnersegment {
+        background-color: transparent;
+      }
+      .courseInnersegment .segment-activated {
+        background-color: transparent;
+        color: color($colors, dark);
+      }
+    }
+    .uniDetails2 {
+      ion-card {
+        position: relative;
+        margin-top: -5.60rem; //right: 15px;
+        @media (max-width: 767px) {
+          margin: auto;
+          width: 100%;
+          right: auto;
+        }
+        ion-card-header {
+          background: #f53d3d;
+          color: #fff;
+          padding: 16px !important;
+        }
+      }
+    }
+    #map,
+    #collegemap {
+      //width: 100%;
+      height: 200px;
+    }
+  }
+  
+  // .uniBanner {
+  //     -webkit-box-flex: 0 !important;
+  //     -webkit-flex: 0 0 100% !important;
+  //     -ms-flex: 0 0 100% !important;
+  //     flex: 0 0 100% !important;
+  //     max-width: 100% !important;
+  //     .uniBannerCard {
+  //         position: relative;
+  //         height: 250px;
+  //         @include max-screen(767px) {
+  //             height: 150px;
+  //             width: 100%;
+  //             margin: auto;
+  //         }
+  //         ion-avatar {            
+  //            // vertical-align: middle;
+  //            // border: 2px solid #fff;
+  //             //border-radius: 50%;
+  //             //background: #69bb7b;
+  //             // img{
+  //             //     vertical-align: middle;
+  //             //     width: 30px;
+  //             //     margin: 3px auto;
+  //             // }
+  //         }
+  //         .actionBtns{
+  //             float: right;
+  //         }
+  //     }
+  //     .overlay {
+  //         position: absolute;
+  //         width: 100%;
+  //         height: 100%;
+  //         background: rgba(0, 0, 0, .4);
+  //     }
+  //     .uniBannerTitle {
+  //         position: absolute;
+  //         top: 8%;
+  //         width: 100%;
+  //         font-weight: bold;
+  //         color: #fff;
+  //         h2 {
+  //             color: #fff;
+  //             font-weight: bold;
+  //             font-size: 2.2rem;
+  //             @include max-screen(767px) {
+  //                 font-size: 1.8rem;
+  //             }
+  //         }
+  //     }
+  // }
+  // .uniDetails1 {
+  //     ion-segment {
+  //         background-color: #f9f9f9;
+  //         .segment-activated {
+  //             background-color: color($colors, secondary);
+  //             color: color($colors, white);
+  //         }
+  //     }
+  //     .courseInnersegment {
+  //         background-color: transparent;
+  //     }
+  //     .courseInnersegment .segment-activated {
+  //         background-color: transparent;
+  //         color: color($colors,dark);
+  //     }
+  // }
+  // .uniDetails2 {
+  //     ion-card {
+  //         @extend .my-component;
+  //         position: relative;
+  //         margin-top: -12rem;
+  //         right: 15px;
+  //         @include max-screen(767px) {
+  //             margin: auto;
+  //             width: 100%;
+  //             right: auto;
+  //         }
+  //         ion-card-header {
+  //             background: #f53d3d;
+  //             color: #fff;
+  //         }
+  //     }
+  // }
+  // #map, #collegemap {
+  //     width: 100%;
+  //     height: 200px;
+  // }
+  
