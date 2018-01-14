@@ -4,9 +4,11 @@ import { AlertController, ViewController, ModalController } from 'ionic-angular'
 import { LoadingController } from 'ionic-angular';
 //import { Router, NavigationExtras } from '@angular/router';
 import { Observable } from 'rxjs/Rx';
+import { DataService } from '../../providers/all.services'
 
 @Component({
     templateUrl: 'login.html',
+    providers: [DataService]
 })
 export class LoginPage {
 
@@ -18,18 +20,20 @@ export class LoginPage {
         //"password": "12345678"
     };
     loader: any
+    res: any;
 
 
     onPageLoaded() {
         console.log("Page Loaded!");
     }
-    constructor(private navParams: NavParams, private modalController: ModalController, private viewController: ViewController,  private alertController: AlertController,
+    constructor(private navParams: NavParams, private DataService: DataService, private modalController: ModalController, private viewController: ViewController, private AlertController: AlertController,
         private toastController: ToastController,
         private loadingController: LoadingController) {
         let templateFlag = navParams.get('popupFlag');
 
 
     }
+
 
 
     presentLoading() {
@@ -41,7 +45,30 @@ export class LoginPage {
     }
 
     onLogin() {
-
+        let data = {
+            "email": this.credentials.email,
+            "password": this.credentials.password
+        }
+        this.DataService.login(data).then(res => {
+            this.res = res;
+            if (this.res.status == true) {
+                debugger
+                let alertMsg = this.AlertController.create({
+                    title: 'Alert',
+                    subTitle: 'User login Successfully',
+                    buttons: ['OK']
+                });
+                alertMsg.present();
+            }
+            else {
+                let alertMsg = this.AlertController.create({
+                    title: 'Error',
+                    subTitle: this.res.error.message,
+                    buttons: ['OK']
+                });
+                alertMsg.present();
+            }
+        })
     }
 
 

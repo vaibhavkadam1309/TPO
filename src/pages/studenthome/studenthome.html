@@ -18,6 +18,16 @@
                 </ion-input>
             </ion-item>
             <ion-item>
+                <ion-label floating primary>Email Id</ion-label>
+                <ion-input type="text" [(ngModel)]="studentHome.email" id="email" name="email" #email="ngModel" required>
+                </ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating primary>Password</ion-label>
+                <ion-input type="text" [(ngModel)]="studentHome.password" id="password" name="password" #password="ngModel" required>
+                </ion-input>
+            </ion-item>
+            <ion-item>
                 <ion-label floating primary>Mobile Number</ion-label>
                 <ion-input type="text" [(ngModel)]="studentHome.mobile" id="mobile" name="mobile" #mobile="ngModel" required>
                 </ion-input>
@@ -57,7 +67,7 @@
         <ion-row *ngIf="newRegisterFlag">
             <ion-col text-right>
                 <button ion-button type="submit" color="light">Cancel</button>
-                <button ion-button color="primary" (click) = "save(studentHome)">Register</button>
+                <button ion-button color="primary" (click)="save(studentHome)">Register</button>
                 <!-- <button  [disabled]="!studentHomeForm.form.valid || !buttonflag" ion-button color="primary">{{staticDataService.data.EN_US.BUTTON_JOIN}}</button> -->
             </ion-col>
         </ion-row>
